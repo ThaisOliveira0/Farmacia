@@ -45,20 +45,46 @@ O objetivo deste trabalho é desenvolver um protótipo funcional de uma loja vir
 2. **Abra o arquivo index.html:** Use um navegador de sua escolha para visualizar a aplicação.
 3. **Navegue pelas páginas:** Utilize os links de navegação para visualizar a loja em funcionamento.
 
-## Tecnologias Usadas:
-• **HTML** - Estrutura básica da página 
-• **CSS** - Design, cores e layout.
-
 ## Estrutura do Projeto
 A estrutura de arquivos do projeto é a seguinte:
 
 - `index.html`: Página principal da loja virtual.
-- `catalogo.html`: Exibe os produtos organizados por categoria.
-- `listagem.html`: Relatório com a listagem de todos os produtos.
-- `cadastro.html`: Formulário para o cadastro de novos clientes.
+- `produtos.html`: Exibe os produtos organizados contindos no banco de dados.
+- `lista.html`: Relatório com a listagem de todos os produtos.
+- `sobre.html`:Contém as informações da loja, como o endereço e informações de contato.
+- `formulario.html`: Formulário para o cadastro de novos clientes.
+- `login.html`:Formulário para clientes que ja possuem contas.
 - `carrinho.html`: Página de visualização e finalização da compra.
-- `style.css`: Arquivo de estilos para o design da loja.
-- `script.js`: Arquivo JavaScript que contém as funcionalidades dinâmicas, como a navegação e interações com o carrinho.
+- `styles.css`: Arquivo de estilos para o design da loja.
+- `app.js`: Arquivo JavaScript que contém o consumo da API e outras funcionalidades.
+
+  Este projeto segue o modelo **MVC** (Model-View-Controller), que é uma arquitetura comum para separar as responsabilidades e tornar o código mais organizado e fácil de manter.
+
+### O que é o MVC?
+
+- **Model**: Representa os dados da aplicação e a lógica de negócios. No nosso caso, é a parte responsável pela interação com o banco de dados, como o gerenciamento de produtos e usuários.
+  
+- **View**: É a interface com o usuário, ou seja, o que o usuário vê e interage. No nosso projeto, são as páginas HTML e os arquivos de estilo CSS que definem a aparência da loja virtual.
+  
+- **Controller**: Faz a intermediação entre o Model e a View, processando as entradas do usuário e manipulando os dados. Em nosso projeto, a lógica de navegação e interações dinâmicas, como a manipulação do carrinho de compras, é feita pelo arquivo JavaScript.
+
+### Como o MVC é aplicado no Projeto?
+
+- **Model**: Os dados dos produtos e dos usuários são gerenciados no banco de dados, e as interações com esses dados são realizadas no backend. (Exemplo: `script.js` e arquivos de conexão com o banco de dados).
+  
+- **View**: As páginas HTML (`index.html`, `catalogo.html`, etc.) são responsáveis por exibir as informações de forma organizada e agradável para o usuário.
+
+- **Controller**: A lógica de interações e manipulação de dados, como adicionar produtos ao carrinho e buscar informações de usuários, é gerida no arquivo `script.js`.
+
+Este padrão MVC ajuda a manter o código organizado e facilita futuras manutenções e expansões do sistema.
+
+### Acessando pela Web:
+
+O projeto está disponível online, onde você pode acessar a loja diretamente por meio do seguinte link:
+
+[**Acesse a Loja Virtual**](http://projetoprogscript.great-site.net/farmacia/Trabalho2/index.html)
+
+Basta clicar no link acima para visualizar a loja em funcionamento.
 
 ## Conexão com o Banco de Dados
 
@@ -72,15 +98,6 @@ Este projeto está integrado a um banco de dados para armazenar e gerenciar os d
 4. **Crie o banco de dados**: Importe o arquivo SQL fornecido.
 5. **Configure a conexão com o banco de dados**: Certifique-se de que os detalhes de conexão com o banco de dados no código estão configurados corretamente (como host, nome de usuário, senha, etc.).
 6. **Acesse o site localmente**: Depois de iniciar o Apache e o MySQL, você pode acessar a loja em `http://localhost/farmacia/views`.
-
-### Acessando pela Web:
-
-O projeto também está disponível online, onde você pode acessar a loja diretamente por meio do seguinte link:
-
-[**Acesse a Loja Virtual**](http://projetoprogscript.great-site.net/farmacia/Trabalho2/index.html)
-
-Basta clicar no link acima para visualizar a loja em funcionamento.
-
 
 ## Quer contribuir?
 Se você tem sugestões ou melhorias para o projeto, fique à vontade para abrir um pull request ou relatar problemas na seção de issues!
